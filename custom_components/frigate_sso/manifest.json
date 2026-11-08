@@ -1,0 +1,17 @@
+{
+  "domain": "frigate_sso",
+  "name": "Frigate SSO",
+  "codeowners": [
+    "@Devlonic"
+  ],
+  "dependencies": [
+    "http",
+    "frontend",
+    "panel_custom"
+  ],
+  "documentation": "https://github.com/Devlonic/HA_SSO_Frigate",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/Devlonic/HA_SSO_Frigate/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
