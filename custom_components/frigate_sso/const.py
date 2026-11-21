@@ -1,7 +1,7 @@
 """Constants for the Frigate SSO bridge."""
 
 DOMAIN = "frigate_sso"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 CONF_URL = "url"
 CONF_START_PATH = "start_path"

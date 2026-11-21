@@ -22,7 +22,12 @@ class FrigateSsoPanel extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: flex; flex-direction: column; height: 100%;
+        /* Size from the viewport, not the parent: since HA 2026.x ha-panel-custom is a
+           display:block box with auto height (padded by the safe-area insets), so a
+           percentage height collapses and the iframe ends up 0 px tall. */
+        :host { display: flex; flex-direction: column; box-sizing: border-box;
+          height: calc(100vh - var(--safe-area-inset-top, 0px) - var(--safe-area-inset-bottom, 0px));
+          height: calc(100dvh - var(--safe-area-inset-top, 0px) - var(--safe-area-inset-bottom, 0px));
           background: var(--primary-background-color); color: var(--primary-text-color); }
         .toolbar { display: none; align-items: center; gap: 12px; height: var(--header-height, 56px);
           padding: 0 12px; flex: none; box-sizing: border-box;
